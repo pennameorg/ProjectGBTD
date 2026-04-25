@@ -12,6 +12,8 @@ struct ProjectGBTDApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
         }
+        .defaultSize(NSScreen.main?.visibleFrame.size ?? CGSize(width: 1400, height: 900))
     }
 }
