@@ -198,7 +198,7 @@ struct FilterBar: View {
 
     private var startDateBinding: Binding<Date> {
         Binding(
-            get: { filter.startDate ?? Calendar.current.date(byAdding: .day, value: -7, to: Date())! },
+            get: { filter.startDate ?? Date(timeIntervalSinceNow: -7 * 24 * 3600) },
             set: { filter.startDate = $0 }
         )
     }
